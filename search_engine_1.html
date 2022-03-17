@@ -96,7 +96,10 @@
         year.innerText = 'Release year : ' + movie.Year;
 
         let imdb = document.createElement("p");
-        imdb.innerText = "Rating : "+ movie.imdbRating;
+        if(movie.imdbRating>8.5){
+            imdb.innerText = "Rating : "+ movie.imdbRating;
+        }
+
 
         let img = document.createElement("img");
         img.src = movie.Poster;
